@@ -16,15 +16,20 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Ishizuka-T.github.io",
-  "scripts": { 
-  "start": "react-scripts start", 
-  "build": "react-scripts build", 
-  "test":"react-scripts test", 
-  "eject": "react-scripts eject", 
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "dependencies": {
+    "homepage": "https://Ishizuka.github.io/my-introduction-page/"
+  },
+  "scripts": {
+    "start": "react-scripts start", 
+    "build": "react-scripts build",
+    "test": "react-scripts test", 
+    "eject": "react-scripts eject", 
+    "predeploy": "npm run build",
+    "deploy": "npm run predeploy && npm run deploy:clean && npm run deploy:move && npm run deploy:git",
+    "deploy:clean": "powershell -Command \"if (Test-Path docs) { Remove-Item docs -Recurse -Force }\"",
+    "deploy:move": "powershell -Command \"Move-Item -Path build -Destination docs\"",
+    "deploy:git": "powershell -Command \"git add . ; git commit -m 'deploy' ; git push origin master\""
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
