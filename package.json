@@ -10,6 +10,7 @@
     "@types/node": "^16.18.88",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.21",
+    "express": "^4.18.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -18,10 +19,10 @@
   },
   "homepage": "https://ishizuka-t.github.io/my-introduction-page/",
   "scripts": {
-    "start": "react-scripts start", 
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test", 
-    "eject": "react-scripts eject", 
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "npm run predeploy && npm run deploy:clean && npm run deploy:move && npm run deploy:git",
     "deploy:clean": "powershell -Command \"if (Test-Path docs) { Remove-Item docs -Recurse -Force }\"",
@@ -48,5 +49,13 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
