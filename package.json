@@ -16,9 +16,7 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
-  "dependencies": {
-    "homepage": "https://Ishizuka.github.io/my-introduction-page"
-  },
+  "homepage": "https://Ishizuka.github.io/my-introduction-page/",
   "scripts": {
     "start": "react-scripts start", 
     "build": "react-scripts build",
