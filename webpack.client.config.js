@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.tsx', // クライアントサイドのエントリーポイント
+  entry: './client/index.js', // クライアントサイドのエントリーポイント
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'client.bundle.js',
