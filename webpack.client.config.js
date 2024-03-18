@@ -1,4 +1,5 @@
 // webpack.client.config.js
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -17,11 +18,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'], //ここを修正
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'main.css', // CSSファイルの出力名
+    }),
+  ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.css'],
   },
 };
